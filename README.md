@@ -25,3 +25,7 @@ To use this cartridge register on www.openshift.com or use OpenShift Enterprise/
 * Go to your openshift URL (in the example above the link becomes [http://web-pres0.rhcloud.com](http://web-pres0.rhcloud.com)) to the see the presentation. 
 
 * To print the presentation to a pdf add ?print-pdf (e.g. [http://web-pres0.rhcloud.com?print-pdf](http://web-pres0.rhcloud.com?print-pdf)) to the url in Google Chrome and use the print function in Chrome.
+
+For local development it's recommended to first create the gear in openshift. After cloning to the desktop everything should be included to run locally. See README.md in template for more information.
+
+
