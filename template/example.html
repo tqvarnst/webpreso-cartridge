@@ -63,63 +63,70 @@
 			<div class="slides">
 				<section data-background="/lib/img/rh-bg-start.jpg" data-background-size="cover" data-background-position="center bottom">
 					<div style="width: 1056px; height: 500px; position: center top; color: white">
-							<h2 style="color: white">Start slide main title</h2>
-							<h4 style="color: white">Sub title (if needed)</h4>
+						<h2 style="color: white">JBoss EAP 6.3 Beta - New Features</h2>
+						<h4 style="color: white">Domain Controller failover</h4>
 					</div>
 					<div style="width: 600px; height: 300px; position: left bottom; text-align: left; color: white">
-					
-							Name<br/>
-							Role<br/>
-							Twitter: <br/>
-							Blog: <a href="#replace" style="color: blue">link</a>
+						Thomas Qvarnström<br/>
+						JBoss Technology Evangelist<br/>
+						Twitter: @tqvarnst<br/>
+						Blog: <a href="http://blog.thomasqvarnstrom.com" style="color: blue">blog.thomasqvarnstrom.com</a>
 					</div>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-						### Agenda
-						* Intro
-						* Section 1
-						* Section 2
-							* Section 2.1
-						* Section 3
+						## Agenda
+						* Intro to JBoss EAP
+						* Different deployment modes for JBoss EAP
+						* What is a domain controller?
+						* Domain Controller failover
+						* Summary
 					</script>
 				</section>
+				
 				<section data-background="/lib/img/rh-bg-8.jpg">
-					<h1 style="color: white">Section 1</h1>
+					<h1 style="color: white; font-weight: bold">What is a domain controller?</h1>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-						### A normal slide with text or images
-						* Some text
-						* Some more text
-						
-						![An image](http://bks8.books.google.se/books?id=3PNfngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api)
+						### Domain controllers
+						* A domain controller is the single administration instance for a domain
+						* It supports a number of different ways to administrate instances, like:
+							* Web console - for humantasks
+							* Command Line Interface (CLI) - for scripting or manual commands
+							* REST - remote API
+							* Java API - local API
 					</script>
-	     		</section>
-					
-				<section>
-					<h1>A Slide with only heading</h1>
 				</section>
 				
 				<section data-background="/lib/img/rh-bg-1.jpg">
-					<h1 style="color: white">Section overarch slide 1</h1>
+					<h1 style="color: white; font-weight: bold">Domain Controller failover</h1>
 				</section>
+				<section>
+					<h3>DC Failover</h3>
+       				<img src="/lib/img/network-drawings-domain-mode.svg" width="800"/>
+       			</section>
+				<section>
+       				<h3>If primary goes down</h3>
+       				<img src="/lib/img/network-drawning-dc-failover-2.svg" width="800"/>
+       			</section>
+       			<section>
+					<h3>The backup can take over<sup>*</sup></h3>
+       				<img src="/lib/img/network-drawning-dc-failover-3.svg" width="800"/><br/>
+       				<font size="-1">*=The process to make the backup domain controller a primary is currently a manual task</font> 
+       			</section>
 				
-				<section data-background="/lib/img/rh-bg-2.jpg">
-					<h1 style="color: white">Section overarch slide 2</h1>
-				</section>
 
 			</div>
 
 		</div>
 		
-		<!-- If a footer text is needed use the uncomment the div class=footer -->
 		<!--
 		<div class="footer">
-			Name, Red Hat
+			Thomas Qvarnstr&ouml;m, Red Hat
 		</div>
 		-->
-
+		
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
@@ -130,11 +137,11 @@
 			Reveal.initialize({
 				controls: true,
 				progress: false,
-				history: false,
-				center: true,
+				history: true,
+				center: false,
 				transition: 'default',
 				backgroundTransition: 'slide',
-				//parallaxBackgroundImage: '/lib/img/rh-bg-1.jpg',
+				//parallaxBackgroundImage: '/lib/img/redhat-main-bg.png',
 				//parallaxBackgroundSize: '1653px 1240px',
 
 				// Optional libraries used to extend on reveal.js
